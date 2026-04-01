@@ -115,6 +115,13 @@ export default function Footer() {
           </div>
 
           <div className="ft-col">
+            <p className="ft-heading">Horario de atención</p>
+            <p className="ft-textBlock">
+              Lunes a Viernes: de 7:30 a 12:00 y de 13:30 a 17:30
+            </p>
+          </div>
+
+          <div className="ft-col">
             <p className="ft-heading">Ubicación</p>
 
             <a
