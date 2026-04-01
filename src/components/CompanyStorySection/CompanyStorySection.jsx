@@ -33,7 +33,7 @@ export default function CompanyStorySection() {
               </p>
 
               <p>
-                Hoy colaboramos con marcas y fábricas que buscan precisión,
+                Hoy colaboramos con marcas y confeccionistas que buscan precisión,
                 identidad y excelencia en cada prenda.
               </p>
             </div>

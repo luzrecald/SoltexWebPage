@@ -2,7 +2,7 @@ export const MANUFACTURING_CAPABILITIES = [
   {
     icon: "palette",
     title: "Armonía / Contraste de color",
-    text: "Antes de la producción del pedido, definimos con el cliente los colores a utilizar en la fabricación de los cuellos y pretinas, logrando coincidencias exactas o contrastes según el resultado deseado.",
+    text: "Antes de la producción, definimos con el cliente los colores a utilizar en la fabricación de los cuellos y pretinas, logrando coincidencias exactas o contrastes según el resultado deseado.",
   },
   {
     icon: "straighten",

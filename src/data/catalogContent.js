@@ -6,7 +6,7 @@ export const PRODUCT_MATERIALS = [
   },
   {
     title: "Poliéster",
-    text: "Resistente y duradero. Mantiene bien el color y soporta el uso sin perder su forma.",
+    text: "Resistente y duradero. Mantiene el color y soporta el uso sin perder su forma.",
     highlights: ["Colores duraderos", "Elasticidad equilibrada"],
   },
 ];

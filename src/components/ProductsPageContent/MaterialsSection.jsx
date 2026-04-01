@@ -9,7 +9,7 @@ export default function MaterialsSection() {
             <span className="pg-kicker">Materiales</span>
             <h2 className="pg-sectionTitle">Materia prima de alta calidad</h2>
             <p className="pg-sectionLead">
-              Trabajamos con buenas fibras para lograr piezas cómodas y
+              Trabajamos con fibras de alta calidad para lograr piezas cómodas y
               duraderas.
             </p>
           </div>
