@@ -1,0 +1,380 @@
+.contact-page {
+  --ct-field-border: rgba(34, 34, 34, 0.12);
+  --ct-field-border-focus: rgba(16, 42, 114, 0.45);
+  --ct-status-danger: var(--color-danger);
+  --ct-status-success: var(--color-success);
+  --ct-visit-overlay: rgba(8, 12, 26, 0.12);
+  --ct-visit-surface: rgba(248, 248, 248, 0.96);
+  --ct-visit-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  background: var(--color-bg);
+  color: var(--color-body);
+}
+
+.contact-shell {
+  width: min(1240px, calc(100% - 72px));
+  margin: 0 auto;
+  padding: 88px 0 80px;
+}
+
+/* HEADER */
+.ct-header {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+.ct-kicker,
+.ct-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-kicker);
+}
+
+.ct-title {
+  margin: 0 0 18px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(46px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.ct-lead {
+  margin: 0;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-body);
+}
+
+/* MAIN */
+.ct-main {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.ct-info {
+  padding-top: 18px;
+}
+
+.ct-infoBlock {
+  max-width: 250px;
+}
+
+.ct-infoGroup {
+  margin-bottom: 32px;
+}
+
+.ct-infoGroup:last-child {
+  margin-bottom: 0;
+}
+
+.ct-info p,
+.ct-info a {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-body);
+  text-decoration: none;
+}
+
+.ct-info a {
+  color: var(--color-link);
+}
+
+.ct-formCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  padding: 42px 40px 38px;
+  border-radius: var(--radius-card);
+}
+
+.ct-form {
+  width: 100%;
+}
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 32px;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-field label {
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.ct-field input,
+.ct-field textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--ct-field-border);
+  background: transparent;
+  padding: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-body);
+  outline: none;
+  border-radius: 0;
+  appearance: none;
+}
+
+.ct-field input:focus,
+.ct-field textarea:focus {
+  border-bottom-color: var(--ct-field-border-focus);
+}
+
+.ct-field--message {
+  margin-top: 34px;
+}
+
+.ct-field--message textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.ct-actions {
+  margin-top: 34px;
+}
+
+.ct-btn {
+  min-width: 220px;
+  border: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 15px 26px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ct-btn:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.ct-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ct-status {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.ct-status.is-error {
+  color: var(--ct-status-danger);
+}
+
+.ct-status.is-ok {
+  color: var(--ct-status-success);
+}
+
+/* VISIT SECTION */
+.ct-visit {
+  position: relative;
+  width: min(1280px, calc(100% - 48px));
+  height: 500px;
+  margin: 0 auto 72px;
+  overflow: hidden;
+}
+
+.ct-visitBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) brightness(0.72);
+}
+
+.ct-visit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ct-visit-overlay);
+}
+
+.ct-visitCard {
+  position: absolute;
+  z-index: 2;
+  bottom: 28px;
+  left: 28px;
+  width: 320px;
+  transform: none;
+  background: var(--ct-visit-surface);
+  padding: 30px 26px;
+  text-align: left;
+  box-shadow: var(--ct-visit-shadow);
+}
+
+.ct-visitCard .ct-label {
+  margin-bottom: 16px;
+}
+
+.ct-visitCard h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.ct-visitCard p {
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-body);
+}
+
+.ct-visitCard a {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-link);
+  border-bottom: 1px solid var(--color-link);
+  padding-bottom: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .contact-shell {
+    width: calc(100% - 48px);
+    padding: 72px 0 68px;
+  }
+
+  .ct-main {
+    gap: 52px;
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+
+  .ct-formCard {
+    padding: 38px 30px 34px;
+  }
+}
+
+@media (max-width: 980px) {
+  .contact-shell {
+    width: calc(100% - 36px);
+    padding: 60px 0 52px;
+  }
+
+  .ct-header {
+    margin-bottom: 40px;
+  }
+
+  .ct-title {
+    font-size: clamp(42px, 10vw, 62px);
+  }
+
+  .ct-lead {
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  .ct-main {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ct-info {
+    padding-top: 0;
+  }
+
+  .ct-infoBlock {
+    max-width: 100%;
+  }
+
+  .ct-infoGroup {
+    margin-bottom: 28px;
+  }
+
+  .ct-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ct-field--message {
+    margin-top: 24px;
+  }
+
+  .ct-visit {
+    width: calc(100% - 36px);
+    height: 460px;
+    margin-bottom: 56px;
+  }
+
+  .ct-visitCard {
+    width: 280px;
+    left: 20px;
+    bottom: 20px;
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-shell {
+    width: calc(100% - 24px);
+    padding-top: 52px;
+  }
+
+  .ct-header {
+    margin-bottom: 36px;
+  }
+
+  .ct-title {
+    font-size: 44px;
+  }
+
+  .ct-lead,
+  .ct-info p,
+  .ct-info a {
+    font-size: 15px;
+  }
+
+  .ct-formCard {
+    padding: 28px 18px 24px;
+  }
+
+  .ct-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ct-visit {
+    width: calc(100% - 24px);
+    height: 400px;
+    margin-bottom: 48px;
+  }
+
+  .ct-visitCard {
+    width: calc(100% - 32px);
+    max-width: 300px;
+    left: 16px;
+    bottom: 16px;
+    padding: 26px 20px;
+  }
+}

@@ -1,0 +1,192 @@
+/* =========================
+   SECTION
+========================= */
+.fh-features {
+  width: 100%;
+  padding: 72px 32px;
+  background: var(--color-surface);
+}
+
+.fh-featuresInner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.fh-featuresHeader {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.fh-featuresTitle {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-heading);
+}
+
+/* =========================
+   LIST
+========================= */
+.fh-featuresList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* =========================
+   CARD
+========================= */
+.fh-featureCard {
+  padding: 44px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fh-featureCard--border {
+  border-right: 1px solid var(--color-border);
+}
+
+/* =========================
+   ICON
+========================= */
+.fh-featureIconWrap {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fh-featureIcon {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
+  color: var(--color-primary);
+}
+
+/* =========================
+   TEXT
+========================= */
+.fh-featureHeading {
+  margin: 0 0 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  line-height: 1.3;
+}
+
+.fh-featureText {
+  max-width: 30ch;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-body);
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1100px) {
+  .fh-features {
+    padding: 64px 24px;
+  }
+
+  .fh-featuresHeader {
+    margin-bottom: 36px;
+  }
+
+  .fh-featuresTitle {
+    font-size: clamp(26px, 4vw, 34px);
+  }
+
+  .fh-featuresList {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fh-featureCard {
+    padding: 36px 24px;
+  }
+
+  .fh-featureCard--border {
+    border-right: none;
+  }
+
+  .fh-featureCard:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 640px) {
+  .fh-features {
+    padding: var(--section-space-mobile) 18px;
+  }
+
+  .fh-featuresHeader {
+    margin-bottom: 28px;
+  }
+
+  .fh-featuresTitle {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .fh-featuresList {
+    grid-template-columns: 1fr;
+  }
+
+  .fh-featureCard,
+  .fh-featureCard:nth-child(odd) {
+    border-right: none;
+  }
+
+  .fh-featureCard {
+    padding: 28px 18px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .fh-featureCard:last-child {
+    border-bottom: none;
+  }
+
+  .fh-featureIconWrap {
+    margin-bottom: 14px;
+  }
+
+  .fh-featureIcon {
+    font-size: 24px;
+  }
+
+  .fh-featureHeading {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .fh-featureText {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}

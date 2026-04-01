@@ -1,0 +1,240 @@
+.hero {
+  position: relative;
+  min-height: 82vh;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(246, 245, 243, 0.72) 0%,
+      rgba(246, 245, 243, 0.28) 42%,
+      rgba(246, 245, 243, 0.06) 100%
+    );
+}
+
+.hero-shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero-card {
+  max-width: 38rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-title {
+  margin: 0 0 1rem;
+  color: var(--color-heading);
+  font-size: 2.8rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  max-width: 9ch;
+}
+
+.hero-subtitle {
+  margin: 0 0 1.8rem;
+  max-width: 30rem;
+  color: var(--color-body);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.95rem 1.8rem;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-btn:hover {
+  background: var(--color-primary-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 768px) {
+  .hero-shell {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .hero-card {
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 3.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.02rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: calc(88vh - 78px);
+  }
+
+  .hero-shell {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .hero-card {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2.3rem, 8vw, 3.4rem);
+    max-width: 9ch;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: calc(78vh - 78px);
+  }
+
+  .hero-shell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-card {
+    padding: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.96rem;
+    margin-bottom: 1.4rem;
+    max-width: 100%;
+  }
+
+  .hero-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.74rem;
+  }
+}
+
+/* ===== HERO ANIMATIONS ===== */
+
+.hero-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFade 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-title {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroFade 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroFade 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.28s;
+}
+
+.hero-btn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroFade 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.36s;
+}
+
+/* Fondo con zoom leve */
+.hero-image {
+  animation: heroZoom 3.4s ease-out forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.015);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-card,
+  .hero-title,
+  .hero-subtitle,
+  .hero-btn,
+  .hero-image {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
