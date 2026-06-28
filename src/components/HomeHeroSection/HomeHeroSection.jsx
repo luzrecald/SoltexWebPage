@@ -1,18 +1,13 @@
 import { NavLink } from "react-router-dom";
 import "./HomeHeroSection.css";
 
-/**
- * Purpose:
- * Delivers the first commercial impression of Soltex with the promise
- * "Cuellos y pretinas tejidos a medida" and a direct CTA into "Productos".
- */
 export default function HomeHeroSection() {
   return (
     <section className="hero" aria-label="Presentación Soltex">
       <div className="hero-bg">
         <img
           src="/hero.webp"
-          alt="Textiles Soltex"
+          alt="Cuellos y pretinas personalizadas de Soltex Paraguay"
           className="hero-image"
           loading="eager"
           decoding="async"
@@ -26,6 +21,13 @@ export default function HomeHeroSection() {
 
           <p className="hero-subtitle">
             Cuellos y pretinas tejidos a medida.
+          </p>
+
+          <p className="sr-only">
+            Soltex Paraguay es una fábrica de cuellos y pretinas personalizadas
+            de algodón y poliéster para remeras polo, uniformes escolares,
+            camperas, buzos y prendas deportivas. Diseños a medida con mano de
+            obra 100% paraguaya.
           </p>
 
           <NavLink to="/productos" className="hero-btn">

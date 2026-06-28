@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 import HomeHeroSection from "../components/HomeHeroSection/HomeHeroSection";
 import CompanyStorySection from "../components/CompanyStorySection/CompanyStorySection";
 import ManufacturingCapabilitiesSection from "../components/ManufacturingCapabilitiesSection/ManufacturingCapabilitiesSection";
@@ -7,15 +9,39 @@ import Gallery from "../components/Gallery/Gallery";
 import NationwideShippingCTA from "../components/NationwideShippingCTA/NationwideShippingCTA";
 import RevealOnScroll from "../components/RevealOnScroll/RevealOnScroll";
 
-/**
- * Purpose:
- * Composes the main brand landing page, moving visitors from "Bienvenidos a
- * Soltex" through company proof, "Productos", customization guidance, and the
- * final conversion prompts.
- */
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>
+          Soltex Paraguay | Fábrica de cuellos y pretinas personalizadas
+        </title>
+
+        <meta
+          name="description"
+          content="Fábrica de cuellos y pretinas de algodón y poliéster para remeras polo, camisetas deportivas, camperas, buzos y uniformes escolares. Diseños a medida, mano de obra 100% paraguaya."
+        />
+
+        <meta
+          property="og:title"
+          content="Soltex Paraguay | Fábrica de cuellos y pretinas personalizadas"
+        />
+
+        <meta
+          property="og:description"
+          content="Fábrica de cuellos y pretinas de algodón y poliéster para remeras polo, camisetas deportivas, camperas, buzos y uniformes escolares."
+        />
+
+        <meta
+          property="og:image"
+          content="https://soltexparaguay.com/footer-logo.png"
+        />
+
+        <meta property="og:url" content="https://soltexparaguay.com/" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       <HomeHeroSection />
 
       <RevealOnScroll>
